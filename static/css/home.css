@@ -1,36 +1,4 @@
-:root {
-    --bs-primary-rgb: 21, 163, 98;
-    --bs-secondary-rgb: 93, 103, 120;
-    --bs-white-rgb: 255, 255, 255;
-    --bs-black-rgb: 0, 0, 0;
-    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-    --bs-body-font-family: var(--bs-font-sans-serif);
-    --bs-body-font-size:1rem;
-    --bs-body-font-weight: 400;
-    --bs-body-line-height: 1.5;
-    --bs-body-color: #212529;
-    --bs-body-color-rgb: 33, 37, 41;
-    --bs-body-bg: #fff;
-    --bs-body-bg-rgb: 255, 255, 255;
-    --bs-emphasis-color: #000;
-    --bs-emphasis-color-rgb: 0, 0, 0;
-    --bs-secondary-color: rgba(33, 37, 41, 0.75);
-    --bs-secondary-color-rgb: 33, 37, 41;
-    --bs-secondary-bg: #e9ecef;
-    --bs-secondary-bg-rgb: 233, 236, 239;
-    --bs-border-width: 1px;
-    --bs-border-style: solid;
-    --bs-border-color: #dee2e6;
-    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
-    --bs-border-radius: 0.375rem;
-    --bs-border-radius-pill: 50rem;
-    --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-    --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
-}
+
 *,*::before,*::after {
     box-sizing:border-box
 }
@@ -41,38 +9,11 @@
 }
 body {
     margin:0;
-    font-family:var(--bs-body-font-family);
-    font-size:var(--bs-body-font-size);
-    font-weight:var(--bs-body-font-weight);
-    line-height:var(--bs-body-line-height);
-    color:var(--bs-body-color);
-    text-align:var(--bs-body-text-align);
-    background-color:var(--bs-body-bg);
     -webkit-text-size-adjust:100%;
     -webkit-tap-highlight-color:rgba(0,0,0,0)
 }
-hr {
-    margin:1rem 0;
-    color:inherit;
-    border:0;
-    border-top:var(--bs-border-width) solid;
-    opacity:.25
-}
-h4,.h4 {
-    margin-top:0;
-    margin-bottom:.5rem;
-    font-weight:500;
-    line-height:1.2;
-    color:var(--bs-heading-color)
-}
-h4,.h4 {
-    font-size:calc(1.275rem + 0.3vw)
-}
-@media(min-width: 1200px) {
-    h4,.h4 {
-        font-size:1.5rem
-    }
-}
+
+
 p {
     margin-top:0;
     margin-bottom:1rem
@@ -90,10 +31,7 @@ ul ul {
 small,.small {
     font-size:0.875em
 }
-a {
-    color:rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
-    text-decoration:underline
-}
+
 a:hover {
     --bs-link-color-rgb: var(--bs-link-hover-color-rgb)
 }
@@ -104,8 +42,6 @@ a:not([href]):not([class]),a:not([href]):not([class]):hover {
 img,svg {
     vertical-align:middle
 }
-
-
 
 .list-unstyled {
     padding-left:0;
@@ -169,9 +105,7 @@ img,svg {
     padding-left:calc(var(--bs-gutter-x)*.5);
     margin-top:var(--bs-gutter-y)
 }
-.col {
-    flex:1 0 0%
-}
+
 .row .col-auto {
     flex:0 0 auto;
     display: flex;
@@ -193,8 +127,6 @@ width: auto;}
     }
 }
 
-
-
 @media(min-width: 579px) {
     .col-lg-5 {
         flex:0 0 auto;
@@ -209,9 +141,6 @@ width: auto;}
 .nav {
     --bs-nav-link-padding-x: 1rem;
     --bs-nav-link-padding-y: 0.5rem;
-    --bs-nav-link-color: var(--bs-link-color);
-    --bs-nav-link-hover-color: var(--bs-link-hover-color);
-    --bs-nav-link-disabled-color: var(--bs-secondary-color);
     display:flex;
     flex-wrap:wrap;
     padding-left:0;
@@ -364,42 +293,12 @@ body {
     -moz-osx-font-smoothing:grayscale;
     color:#5d6778
 }
-h4,.h4 {
-    color:rgb(118, 183, 240);
-    font-weight:600
-}
-a {
-    color:#15a362;
-    text-decoration:none
-}
-a:hover {
-    color:#6686f0
-}
+
 
 h4,.h4 {
     font-size:1.5rem
 }
-.dropdown-menu {
-    border-color:#e7e9ed
-}
-.dropdown-menu .dropdown-item {
-    padding:.5rem 1rem
-}
-.dropdown-menu .dropdown-item:hover {
-    color:#252930
-}
-.dropdown-menu .dropdown-item:hover,.dropdown-menu .dropdown-item:focus {
-    background:#fafbff
-}
-.dropdown-menu .dropdown-item:active {
-    background:#fafbff
-}
-.dropdown-divider {
-    border-top-color:#e7e9ed;
-    -webkit-opacity:1;
-    -moz-opacity:1;
-    opacity:1
-}
+
 .app-header {
     box-shadow:0 2px 9px 0 rgba(0,0,0,.3);
     background-color: aliceblue;

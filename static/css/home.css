@@ -364,20 +364,20 @@ h4,.h4 {
     border-radius:.5rem
 }
 .app-branding {
-    height:60px;
+    height:auto;
     display: block;
     background: transparent;
     margin: 0 auto;
 }
 .app-branding .logo-icon {
-    width:50px;
-    height:50px;
+    width:100px;
+    height:100px;
     border-radius: 50%;
-    margin: 0.5em;
+    margin: 1em 1em 0 1em;
 }
 
 .app-nav {
-    color:#5d6778;
+    color:blue;
     display:block;
     padding:0;
     width:100%
@@ -387,22 +387,21 @@ h4,.h4 {
 }
 .app-nav .nav-item {
     display:block;
-    color:#333;
+    color:blue;
     background-color: aliceblue;
 }
 .app-nav .nav-link {
     display:block;
     padding:.875rem 1rem;
-    color:#252930;
+    color:blue;
     position:relative;
     display:block;
     padding-left:3rem;
     border-left:3px solid rgba(0,0,0,0);
-    color:#333;
 
 }
 .app-nav .nav-link:hover {
-    color:#a5adf3
+    transition: all .4s ease-in-out;
 }
 .app-nav .nav-icon {
     position:absolute;
@@ -470,6 +469,19 @@ h4,.h4 {
     }
 }
 
+.start-container {
+    background-image: url('../images/tattoo-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #fff;
+}
+
 .container h1 {
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
@@ -502,3 +514,71 @@ h4,.h4 {
 .card{
     margin-bottom: 5%;
 }
+
+ /* Make the button blink */
+ @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .blinking-btn {
+    animation: blink 1s infinite;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.6);
+  }
+
+  .tattoo-gallery-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: transparent;
+    padding: 20px 0;
+  }
+
+  .tattoo-gallery-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 60s linear infinite;
+  }
+
+  .tattoo-gallery-track img {
+    width: 200px;
+    height: auto;
+    margin: 0 20px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .tattoo-gallery-track img:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .fade-left, .fade-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .fade-left {
+    left: 0;
+    background: linear-gradient(to right, aliceblue, transparent);
+  }
+
+  .fade-right {
+    right: 0;
+    background: linear-gradient(to left, aliceblue, transparent);
+  }

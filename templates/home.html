@@ -27,7 +27,7 @@
                             <a id="sidepanel-toggler" class="sidepanel-toggler d-inline-block d-xl-none p-md-3" style="cursor: pointer; color: #333;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg>
                             </a>
-                            <p style="font-size: larger; font-weight: 700; padding-left: 2ex; text-align: center;" >Art Experience</p>
+                            <p style="font-size: larger; font-weight: 700; padding-left: 2ex; text-align: center;" > Dee Arts Experience</p>
                         </div>
 						
                         
@@ -41,7 +41,8 @@
 		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
 		        <div class="app-branding">
 		            <a class="app-logo" href="{{ url_for('home') }}"><img class="logo-icon me-2" src="{{ url_for('static', filename='images/youngprince.jpg') }}" alt="logo"></a>
-		        </div> 
+		        </div> <br>
+
 			    <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
 					<ul class="app-menu list-unstyled accordion" id="menu-accordion">
 						<li class="nav-item">
@@ -57,7 +58,7 @@
 							</a>
 						</li>
                         <li class="nav-item">
-							<a class="nav-link" style="font-size: large;" href="#">
+							<a class="nav-link" style="font-size: large;" href="/about-us">
 								<span class="nav-icon"><i class="fa-solid fa-address-card"></i></span>
 								<span class="nav-link-text">About Us</span>
 							</a>
@@ -73,22 +74,22 @@
 		    <div class="container-xl">
 			    <main role="main" class="pb-3">
 					{% block content%}
-					<div class="container text-center" style="margin-top: 15%;">
+					<div class="start-container container text-center">
 						<h1 class="mb-5">Express Yourself Through Arts</h1>
 						<p class="mb-4" style="font-size: large;">At arts by Dee, we believe every tattoo tells a story. Whether it’s a symbol of transformation, a cherished memory or a bold new beginning, your skin becomes a canvas for meaningful, beautiful art. Our goal is to help you express your individuality in the most creative, confident, and stylish way possible.</p>
-    					<a href="#"><button class="btn btn-primary mb-4"><span class="p-4">Book Now</span> </button></a>
+    					<a href="/booking"><button class="btn btn-primary mb-4 mt-3 blinking-btn"><span class="p-4">Book Now</span> </button></a>
 					</div>
 
 					<section>
 						<div class="container text-center" style="margin-top: 20%;">
-							<h1 class="mb-5">About Us</h1>
+							<h1 class="mb-3">About Us</h1>
 							<p>As Dee Arts Team, we are passionate tattoo artists with deep appreciation for the art of storytelling through ink. <br> With several years of experience in crafting both intricate and minimalist tattoos, We aim to provide not just a tattoo session, but a collaborative, comfortable, and memorable experience for every client. We work closely with each individual to design pieces that hold deep personal significance while reflecting true artistry. The studio is designed to be a calm and inspiring environment where your creativity and confidence are encouraged.</p>
 						</div>
 					</section>
 
 					<section>
 						<div class="container text-center mb-4" style="margin-top: 10%;">
-							<h1 class="mb-5">Studio Availability</h1>
+							<h1 class="mb-3">Studio Availability</h1>
 							<p>We understand that your schedule matters, so we offer flexible appointment times throughout the week to accommodate your needs. Below is our current availability for tattoo sessions:</p>
 						</div>
 						<table style="width: 100%; max-width: 600px; margin: 30px auto; border-collapse: collapse; text-align: center; background-color: #222; color: #fff;">
@@ -132,8 +133,8 @@
 					</section>
 
 					<section>
-						<div class="container text-center" style="margin-top: 10%;">
-							<h1 class="mb-5">Client Testimonials</h1>
+						<div class="container text-center" style="margin-top: 16%;">
+							<h1 class="mb-3">Client Testimonials</h1>
 							<div class="testimonials">
 								<div class="testimonial">
 									<p>"I was nervous about getting my first tattoo, but the moment I walked into Dee Arts, I felt at ease. The artist walked me through everything and made sure I was comfortable every step of the way. Now I have a beautiful piece I’ll cherish forever!" – Lisa M.</p>
@@ -141,19 +142,71 @@
 								<div class="testimonial">
 									<p>"I’ve had tattoos done in different places, but none compare to the experience I had here. Dee Arts is not just a tattoo studio — it’s a place where art meets heart. Their attention to detail and warm service will keep me coming back." – Kevin T.</p>
 								</div>
-								<div class="testimonial">
-									<p>"Dee Arts truly understood my vision and brought it to life better than I ever imagined. The entire process, from consultation to aftercare, was smooth, professional and deeply personalized. Clean studio, relaxed vibe, and truly amazing work. I’ve never felt more confident showing off my tattoo!" – Amina J.</p>
-								</div>
-								<div class="testimonial">
-									<p>"The level of professionalism and creativity was above and beyond. Dee Arts took the time to design something truly special for me, and the final result blew me away. If you’re looking for someone who listens and delivers exceptional quality, this is the place." – Brian K.</p>
-								</div>
 							  </div>
 						</div>
 					</section>
 
 					<section>
+						<div class="container tattoo-gallery-container mt-5">
+							<h1 class="mb-5 text-center">Tattoos Done by us...</h1>
+							<div class="fade-left"></div>
+							<div class="fade-right"></div>
+							
+							<div class="tattoo-gallery-track">
+							  <img src="{{ url_for('static', filename='images/arm.jpg') }}" alt="Tattoo 1">
+							  <img src="{{ url_for('static', filename='images/arm-2.jpg') }}" alt="Tattoo 2">
+							  <img src="{{ url_for('static', filename='images/back-1.jpg') }}" alt="Tattoo 3">
+							  <img src="{{ url_for('static', filename='images/back-2.jpg') }}" alt="Tattoo 4">
+							  <img src="{{ url_for('static', filename='images/back-3.jpg') }}" alt="Tattoo 5">
+							  <img src="{{ url_for('static', filename='images/thigh.jpg') }}" alt="Tattoo 6">
+							  <img src="{{ url_for('static', filename='images/tattoo-arm-3.jpg') }}" alt="Tattoo 7">
+							  <img src="{{ url_for('static', filename='images/arm.jpg') }}" alt="Tattoo 1">
+							  <img src="{{ url_for('static', filename='images/arm-2.jpg') }}" alt="Tattoo 2">
+							  <img src="{{ url_for('static', filename='images/back-1.jpg') }}" alt="Tattoo 3">
+							  <img src="{{ url_for('static', filename='images/back-2.jpg') }}" alt="Tattoo 4">
+							  <img src="{{ url_for('static', filename='images/back-3.jpg') }}" alt="Tattoo 5">
+							  <img src="{{ url_for('static', filename='images/thigh.jpg') }}" alt="Tattoo 6">
+							  <img src="{{ url_for('static', filename='images/tattoo-arm-3.jpg') }}" alt="Tattoo 7">
+							</div>
+						  </div>
+					</section>
+
+					<section>
+						<div class="container" style="margin-top: 10%;">
+							<h1 class="mb-3 text-center">Tattoo Services for Minors</h1>
+							<p style="font-size: 16px; color: #333;">
+								In compliance with <strong>Florida State Law</strong>, you <strong>must be 18 years or older</strong> with a 
+								<strong>valid photo ID</strong> to receive tattoo services without parental involvement.
+							  </p>	
+							  <p style="font-size: 16px; color: #333;">If you are <strong>under 18</strong>, you <strong>must bring both</strong>:
+									<ul style="margin-left: 20px;">
+									<li>A <strong>valid photo ID</strong></li>
+									<li>
+										A <strong>notarized Minor Consent Form</strong> signed by a 
+										<strong>parent or legal guardian</strong>
+									</li>
+									</ul>
+							  </p>
+							  <p style="font-size: 16px; color: #333;">
+								The form must be completed and signed <strong>in front of a notary</strong>, and it 
+								<strong>must include a notary stamp</strong>. You can download the required form directly from the 
+								Florida Department of Health here:
+							  </p>
+							  <p style="font-size: 16px;">
+								👉 
+								<a href="http://www.floridahealth.gov/ENVIRONMENTAL-HEALTH/tattooing/" 
+								   target="_blank" style="color: #1e90ff; text-decoration: none;">Minor Consent Form – Florida Department of Health</a>
+							  </p>
+							  <p style="font-size: 16px; color: #333;">
+								Please <strong>contact Us directly</strong> if you have any questions about age verification 
+								or the consent process — I'm happy to walk you through it.
+							  </p>					
+						</div>
+					</section>
+
+					<section>
 						<div class="container text-center" style="margin-top: 15%;">
-							<h1 class="mb-5">Get in Touch</h1>
+							<h1 class="mb-3">Get in Touch</h1>
 							<p>Have questions or need more info before booking? Feel free to reach out directly. We'll be happy to assist with any inquiries about design ideas, pricing, session durations, aftercare, and more. You can contact us by email, phone or message us on Instagram for quick replies and to view more of our work. </p>
 							<p><i class="fa-solid fa-envelope"></i> - deeartsexperience.com<br><br>
 								<i class="fa-solid fa-phone"></i> - +1(854) 123 4567<br><br>

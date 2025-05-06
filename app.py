@@ -15,7 +15,7 @@ def booking():
     """book a session with art experience"""
     return render_template("booking.html")
 
-@app.get('/about')
+@app.get('/about-us')
 def about():
     """know more about art experience"""
     return render_template("about.html")

@@ -515,6 +515,9 @@ h4,.h4 {
     margin-bottom: 5%;
 }
 
+p{
+    font-family: "Segoe UI", Tahoma, Geneva, sans-serif;
+}
  /* Make the button blink */
  @keyframes blink {
     0%, 100% { opacity: 1; }

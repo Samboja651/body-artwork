@@ -3,3 +3,4 @@ __pycache__
 .artwork
 temp.md
 .env
+*.db

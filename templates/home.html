@@ -30,7 +30,6 @@
                             <p style="font-size: larger; font-weight: 700; padding-left: 2ex; text-align: center;" > Dee Arts Experience</p>
                         </div>
 						
-                        
                     </div>
                 </div>
             </div>
@@ -52,17 +51,29 @@
 							</a>
 						</li>
                         <li class="nav-item">
-							<a class="nav-link" style="font-size: large;" href="/booking">
+							<a class="nav-link" style="font-size: large;" href="{{ url_for('booking') }}">
 								<span class="nav-icon"><i class="fa-solid fa-calendar-check"></i></span>
 								<span class="nav-link-text">Book Now</span>
 							</a>
 						</li>
                         <li class="nav-item">
-							<a class="nav-link" style="font-size: large;" href="/about-us">
+							<a class="nav-link" style="font-size: large;" href="{{ url_for('about') }}">
 								<span class="nav-icon"><i class="fa-solid fa-address-card"></i></span>
 								<span class="nav-link-text">About Us</span>
 							</a>
 						</li>
+                        <li class="nav-item">
+							<a class="nav-link" style="font-size: large;" href="{{ url_for('sign_up') }}">
+								<span class="nav-icon"><i class="fa-solid fa-address-card"></i></span>
+								<span class="nav-link-text">Create Account</span>
+							</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" style="font-size: large;" href="{{ url_for('sign_in') }}">
+								<span class="nav-icon"><i class="fa-solid fa-address-card"></i></span>
+								<span class="nav-link-text">Sign in</span>
+							</a>
+						</li>					
 					</ul>
 				</nav>
 	        </div>
@@ -77,7 +88,7 @@
 					<div class="start-container container text-center">
 						<h1 class="mb-5">Express Yourself Through Arts</h1>
 						<p class="mb-4" style="font-size: large;">At arts by Dee, we believe every tattoo tells a story. Whether it’s a symbol of transformation, a cherished memory or a bold new beginning, your skin becomes a canvas for meaningful, beautiful art. Our goal is to help you express your individuality in the most creative, confident, and stylish way possible.</p>
-    					<a href="/booking"><button class="btn btn-primary mb-4 mt-3 blinking-btn"><span class="p-4">Book Now</span> </button></a>
+    					<a href="{{ url_for('booking') }}"><button class="btn btn-primary mb-4 mt-3 blinking-btn"><span class="p-4">Book Now</span> </button></a>
 					</div>
 
 					<section>
@@ -227,5 +238,7 @@
         </div>
     </div>  					
     <script src="{{ url_for('static', filename='js/home.js') }}"></script> 
-</body>
+	{% block authscript %}
+	{% endblock %}
+</body> 
 </html> 

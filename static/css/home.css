@@ -521,7 +521,7 @@ p{
  /* Make the button blink */
  @keyframes blink {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+    50% { opacity: 0.3; }
   }
 
   .blinking-btn {
@@ -547,8 +547,8 @@ p{
   }
 
   .tattoo-gallery-track img {
-    width: 200px;
-    height: auto;
+    width: 300px;
+    height: 350px;
     margin: 0 20px;
     flex-shrink: 0;
     transition: transform 0.3s ease;

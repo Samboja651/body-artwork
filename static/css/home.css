@@ -470,7 +470,20 @@ h4,.h4 {
 }
 
 .start-container {
-    background-image: url('../images/tattoo-banner.jpg');
+    background-image: url('../images/studio-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.end-container {
+    background-image: url('../images/studio-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;

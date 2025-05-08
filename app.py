@@ -29,10 +29,10 @@ def booking():
     """book a session with art experience"""
     return render_template("booking.html", booking_link=BOOKING_LINK)
 
-@app.get('/about-us')
-def about():
-    """know more about art experience"""
-    return render_template("about.html")
+# @app.get('/about-us')
+# def about():
+#     """know more about art experience"""
+#     return render_template("about.html")
 
 @app.route('/sign_up', methods=['GET', 'POST'])
 def sign_up():

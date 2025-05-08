@@ -26,8 +26,10 @@
                         <i class="fa-regular fa-eye" id="v_plain" style="display: block;"></i>
                     </div>
                 </div>
-                <button type="submit" class="block w-full bg-blue-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-4" style="background-color: skyblue; border: none;">Submit</button>
-                <span class="text-sm ml-2 cursor-pointer">Don't have an account? <a href="{{ url_for('sign_up') }}">Create Account</a></span>
+                <div class="flex px-4 mb-2">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+                <p class="text-sm ml-2 cursor-pointer">Don't have an account? <a href="{{ url_for('sign_up') }}">Create Account</a></p>
             </form>
             {% endblock %}
         </div>

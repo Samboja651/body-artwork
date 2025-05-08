@@ -470,10 +470,12 @@ h4,.h4 {
 }
 
 .start-container {
-    background-image: url('../images/studio-2.jpg');
+    background-image: url('../images/studio-2.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    background-position: center;
+    max-width: 100%;
+    height: 40dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -486,7 +488,9 @@ h4,.h4 {
     background-image: url('../images/studio-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    background-position: center;
+    max-width: 100%;
+    height: 43dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -494,7 +498,22 @@ h4,.h4 {
     border-radius: 10px;
     color: #fff;
 }
-
+@media (min-width: 421px) {
+    .start-container, .end-container {
+        height: 50dvh;
+    }
+}
+@media (min-width: 470px) {
+    .start-container, .end-container {
+        height: 63dvh;
+    }
+}
+@media (min-width: 600px) {
+    .start-container, .end-container {
+        max-width: 80%;
+        height: 80dvh;
+    }
+}
 .container h1 {
     font-weight: 700;
     font-family: 'Poppins', sans-serif;

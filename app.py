@@ -1,12 +1,15 @@
 """art-experience"""
 
 import os
+import threading
 from urllib.parse import urlparse
-import datetime
+import time
+from datetime import timedelta
 from werkzeug.security import check_password_hash, generate_password_hash
-from flask import Flask, render_template, request, redirect, flash, url_for
+from flask import Flask, render_template, request, redirect, flash, url_for, jsonify
 from dotenv import load_dotenv
 import psycopg2
+import requests
 
 
 load_dotenv(".env")
@@ -14,10 +17,11 @@ load_dotenv(".env")
 PAYMENT_LINK = os.getenv("PAYMENT_LINK")
 BOOKING_LINK = os.getenv("BOOKING_LINK")
 DATABASE = os.getenv("INTERNAL_DATABASE_URL")
+KEEP_ALIVE_WORKER = os.getenv("KEEP_ALIVE_URL")
 
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET")
-app.permanent_session_lifetime = datetime.timedelta(minutes=45)
+app.permanent_session_lifetime = timedelta(minutes=45)
 
 
 # --------------------------
@@ -138,3 +142,42 @@ def sign_in():
             return redirect(url_for("sign_in"))
 
     return render_template("login.html")
+
+
+# --------
+# PING KEEP ALIVE TO STAY ALIVE
+# --------
+@app.route("/ping", methods=["GET"])
+def _handle_ping():
+    """
+    Handle ping requests from keep alive worker
+    Get full understanding from the readme file.
+    """
+    print("Received ping from Keep Alive Worker: Active")
+    return jsonify({"message": "App is active"}), 200
+
+
+# --------
+# a keep alive for keep alive worker
+# --------
+def ping_keep_alive_worker():
+    """Send a request to keep the keep_alive_worker alive"""
+    while True:
+        try:
+            requests.get(KEEP_ALIVE_WORKER, timeout=60)
+
+        except requests.RequestException:
+            "Failed to reach Keep Alive Worker. Network Issue"
+
+        finally:
+            # Wait for 10 minutes before sending the next request
+            time.sleep(600)
+
+
+# Start the ping loop to communicate with keep_alive_worker.py
+ping_thread = threading.Thread(target=ping_keep_alive_worker)
+ping_thread.daemon = True
+ping_thread.start()
+
+if __name__ == "__main__":
+    app.run(debug=False, port=5000)

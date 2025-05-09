@@ -80,8 +80,11 @@
 			    <main role="main" class="pb-3">
 					{% block content%}
 					<div class="start-container container text-center">
-						<a href="{{ url_for('booking') }}"><button class="btn btn-primary mb-4 mt-3 blinking-btn"><span class="p-4">Book Now</span> </button></a>
 					</div>
+					<!-- book now -->
+					<div class="container text-center" style="margin-top:3%;">
+						<a href="{{ url_for('booking') }}"><button class="btn btn-primary mb-4 mt-3 blinking-btn"><span class="p-4">Book Now</span> </button></a>
+					</div>					
 
 					<section>
 						<div class="container text-center" style="margin-top: 20%;">
@@ -180,9 +183,6 @@
 						<div class="end-container container text-center">
 							<a href="{{ url_for('booking') }}"><button class="btn btn-primary mb-4 mt-3 blinking-btn"><span class="p-4">Book Now</span> </button></a>
 						</div>
-						<!-- book now -->
-						 <!-- <div class="container text-center" style="margin-top:3%;">
-						 </div> -->
 					</section>
 
 					<section>

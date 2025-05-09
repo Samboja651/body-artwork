@@ -1,4 +1,4 @@
 flask
 dotenv
 gunicorn
-bcrypt
+psycopg2-binary

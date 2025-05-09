@@ -5,7 +5,11 @@
 {% block container %}
 <form class="bg-transparent w-2/3" style="height: auto;" method="post" action="{{ url_for('sign_up') }}">
     <h1 class="text-gray-800 font-bold text-2xl mb-1 py-4">Create an Account</h1>
-
+   
+    {% for message in get_flashed_messages() %}
+        <div class="flash mb-3" style="text-align: center; color: crimson;">{{ message }}</div>
+    {% endfor %}
+    
     <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
         <i class="fa-solid fa-at"></i>
         <input class="pl-2 w-full outline-none border-none" type="email" name="email" placeholder="Email" maxlength="50" required />

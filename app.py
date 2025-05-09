@@ -65,6 +65,10 @@ def booking():
 #     """know more about art experience"""
 #     return render_template("about.html")
 
+@app.route("/care-instructions", methods=["GET"])
+def care_instructions():
+    """Get care instructions for the art experience"""
+    return render_template("care_instructions.html")
 
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():

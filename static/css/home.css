@@ -454,9 +454,7 @@ h4,.h4 {
     padding-top:56px;
     overflow-x:hidden
 }
-.app-footer .copyright {
-    font-size:.8125rem
-}
+
 /* styling app wrapper with transition */
 .app-wrapper {
     background-color: aliceblue;

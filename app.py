@@ -45,8 +45,8 @@ def connect_db():
         psycopg2.ProgrammingError,
         psycopg2.DatabaseError,
     ) as e:
-        return f"Connection Failed: {e}"
-
+        print(f"Connection Failed: {e}")
+        return None 
 
 @app.get("/")
 def home():
@@ -84,6 +84,13 @@ def sign_up():
 
         # Save user details to the database
         conn = connect_db()
+
+        # Check if the connection was successful
+        if conn is None:
+            flash("Error connecting to the database. Please try again later.")
+            return redirect(url_for("sign_up"))
+        
+        # Create a cursor to execute SQL queries
         cursor = conn.cursor()
         try:
             cursor.execute(
@@ -124,6 +131,11 @@ def sign_in():
 
         # Connect to the database
         conn = connect_db()
+
+        if conn is None:
+            flash("Error veryfying your information. Please try again later.")
+            return redirect(url_for("sign_in"))
+        
         cursor = conn.cursor()
         try:
             # Fetch the user by email

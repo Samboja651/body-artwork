@@ -6,11 +6,11 @@
     <div class="h-screen md:flex">
         <div class="flex md:w-full justify-center py-10 items-center">
             {% block container %}
-                <div class="container py-5" style=" height: 80vh;">
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-md-6 col-lg-5">
+                <div class="container py-5" style=" display: grid; height: 80vh;">
+                    <div class="row justify-content-center align-content-center">
+                        <div class="col-md-6 col-lg-7">
                             <form method="post" action="{{ url_for('sign_in') }}" class="bg-white p-4 rounded shadow">
-                                <h1 class="text-center text-dark fw-bold mb-4">Sign in</h1>
+                                <h1 class="text-center text-dark fw-bold mb-5">Sign in</h1>
 
                                 {% for message in get_flashed_messages() %}
                                     <div class="alert alert-danger text-center" role="alert">
@@ -23,7 +23,7 @@
                                     <input type="email" name="email" class="form-control" placeholder="Email" required />
                                 </div>
 
-                                <div class="mb-3 input-group">
+                                <div class="mb-5 input-group">
                                     <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
                                     <input type="password" name="password" id="password" class="form-control" placeholder="Password" minlength="8" required />
                                     <span class="input-group-text bg-white border-start-0" id="visibility" style="cursor: pointer;">

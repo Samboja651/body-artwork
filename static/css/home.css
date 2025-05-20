@@ -301,7 +301,7 @@ h4,.h4 {
 
 .app-header {
     box-shadow:0 2px 9px 0 rgba(0,0,0,.3);
-    background-color: aliceblue;
+    background-color: whitesmoke;
     color:black;
 }
 .app-header-inner {
@@ -322,7 +322,7 @@ h4,.h4 {
     top:0;
     font-size:.875rem;
     border-right:1px solid #e7e9ed;
-    background: aliceblue;
+    background: white;
     color:#333;
 }
 .app-sidepanel .sidepanel-inner {
@@ -353,14 +353,14 @@ h4,.h4 {
     overflow-y:auto;
     scrollbar-color:rgba(0,0,0,.1) #e7e9ed;
     scrollbar-width:thin;
-    background-color: aliceblue;
+    background-color: white;
     color:#333;
 }
 .app-sidepanel .app-nav-main::-webkit-scrollbar {
     width:6px;
 }
 .app-sidepanel .app-nav-main::-webkit-scrollbar-thumb {
-    background-color: aliceblue;
+    background-color: white;
     border-radius:.5rem
 }
 .app-branding {
@@ -388,7 +388,7 @@ h4,.h4 {
 .app-nav .nav-item {
     display:block;
     color:blue;
-    background-color: aliceblue;
+    background-color: white;
 }
 .app-nav .nav-link {
     display:block;
@@ -408,8 +408,6 @@ h4,.h4 {
     left:1rem;
     top:.7rem
 }
-
-
 
 /* styling various components with media query */
 @media(max-width: 1199.98px) {
@@ -457,7 +455,7 @@ h4,.h4 {
 
 /* styling app wrapper with transition */
 .app-wrapper {
-    background-color: aliceblue;
+    background-color: white;
     transition:all .4s ease-in-out;
     color: #333;
 }
@@ -531,16 +529,14 @@ h4,.h4 {
     transition: all 0.3s ease;
 }
 
-
 /* booking page */
-/* card layout styling */
-/* mobile responsive */
 .card-layout{
     display: flex;
     flex-wrap: wrap;
     gap: 3%;
     justify-content: space-evenly;
 }
+
 .card{
     margin-bottom: 5%;
 }
@@ -608,10 +604,10 @@ p{
 
   .fade-left {
     left: 0;
-    background: linear-gradient(to right, aliceblue, transparent);
+    background: linear-gradient(to right, white, transparent);
   }
 
   .fade-right {
     right: 0;
-    background: linear-gradient(to left, aliceblue, transparent);
+    background: linear-gradient(to left, white, transparent);
   }

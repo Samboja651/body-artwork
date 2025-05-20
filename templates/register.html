@@ -1,51 +1,41 @@
 <!DOCTYPE html>
-
-{% extends 'login.html' %}
-
+{% extends "login.html"%}
+{% block title %}Register | The plug Trading{% endblock %}
 {% block container %}
-<div class="container py-5"  style="display: grid; height: 80vh;">
-    <div class="row justify-content-center align-content-center">
-        <div class="col-md-6 col-lg-7">
-            <form method="post" action="{{ url_for('sign_up') }}" class="bg-white p-4 rounded shadow">
-                <h1 class="text-center text-dark fw-bold mb-4">Create an Account</h1>
+    <form class="bg-transparent w-2/3" style="height: auto;" method="post" action="{{ url_for('sign_up') }}">
+        <img style="width: 100px; display: block; margin: 0 auto; border-radius: 50%;" src="{{ url_for('static', filename='img/thee_plug_logo.jpg') }}" alt="">
+        <h1 class="text-gray-800 font-bold text-2xl mb-1 py-4">Arts Experience</h1>
+        <p class="text-lg font-normal text-white-600 mb-7">Register</p>
 
-                {% for message in get_flashed_messages() %}
-                    <div class="alert alert-danger text-center" role="alert">
-                        {{ message }}
-                    </div>
-                {% endfor %}
+        {% for message in get_flashed_messages() %}
+            <div class="flash mb-3" style="text-align: center; color: crimson;">{{ message }}</div>
+        {% endfor %}
 
-                <div class="mb-3 input-group">
-                    <span class="input-group-text"><i class="fa-solid fa-at"></i></span>
-                    <input type="email" name="email" class="form-control" placeholder="Email" maxlength="50" required>
-                </div>
-
-                <div class="mb-3 input-group">
-                    <span class="input-group-text"><i class="fa-solid fa-circle-user"></i></span>
-                    <input type="text" name="fname" class="form-control" placeholder="First Name" maxlength="15" required>
-                </div>
-
-                <div class="mb-3 input-group">
-                    <span class="input-group-text"><i class="fa-solid fa-circle-user"></i></span>
-                    <input type="text" name="lname" class="form-control" placeholder="Last Name" maxlength="15" required>
-                </div>
-
-                <div class="mb-4 input-group">
-                    <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" minlength="8" required>
-                    <span class="input-group-text bg-white border-start-0" id="visibility" style="cursor: pointer;">
-                        <i class="fa-regular fa-eye" id="v_slash" style="display: none; cursor: pointer;"></i>
-                        <i class="fa-regular fa-eye-slash" id="v_plain" style="display: block; cursor: pointer;"></i>
-                    </span>
-                </div>
-
-                <div class="d-grid mb-3">
-                    <button type="submit" class="btn btn-primary">Sign up</button>
-                </div>
-
-                <p class="text-center small">Already have an account? <a href="{{ url_for('sign_in') }}">Sign in</a></p>
-            </form>
+        <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
+            <i class="fa-solid fa-at"></i>
+            <input class="pl-2 w-full outline-none border-none" type="email" name="email" placeholder="Email" required />
         </div>
-    </div>
-</div>
+
+        <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
+            <i class="fa-solid fa-circle-user"></i>
+            <input class="pl-2 w-full outline-none border-none" type="text" name="fname" maxlength="15" placeholder="First Name" required/>
+        </div>
+
+        <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
+            <i class="fa-solid fa-circle-user"></i>
+            <input class="pl-2 w-full outline-none border-none" type="text" name="lname" maxlength="15" placeholder="Last Name" required/>
+        </div>
+
+
+        <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
+            <i class="fa-solid fa-lock"></i>
+            <input class="pl-2 w-full outline-none border-none" type="password" name="password" id="password" placeholder="Password (alphanumeric)" maxlength="16" required/>
+            <div class="ml-2 cursor-pointer" id="visibility">
+                <i class="fa-regular fa-eye-slash ml-2" id="v_slash" style="display: none;"></i>
+                <i class="fa-regular fa-eye" id="v_plain" style="display: block;"></i>
+            </div>
+        </div>
+        <button type="submit" class="block w-full bg-blue-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-4">Register</button>
+        <span class="text-sm ml-2 cursor-pointer mb-4">Already have an account?  <a href="{{ url_for('sign_in') }}" style="text-decoration: none;">login</a></span>
+    </form>
 {% endblock %}

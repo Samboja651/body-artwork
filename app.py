@@ -54,10 +54,15 @@ def home():
     return render_template("home.html")
 
 
-@app.get("/booking")
-def booking():
+@app.get("/book-with-us")
+def book_with_us():
     """book a session with art experience"""
-    return render_template("booking.html", booking_link=BOOKING_LINK)
+    return render_template("tat-prices.html", booking_link=BOOKING_LINK)
+
+@app.get("/our-work")
+def our_work():
+    """our work"""
+    return render_template("our-work.html")
 
 
 # @app.get('/about-us')

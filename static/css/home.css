@@ -490,7 +490,7 @@ h4,.h4 {
     background-size: cover;
     background-position: center;
     max-width: 100%;
-    height: auto;
+    height: 43dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -513,7 +513,7 @@ h4,.h4 {
         height: 55dvh;
     }
 }
-/* @media (min-width: 600px) {
+@media (min-width: 600px) {
     .end-container {
         max-width: 80%;
         height: 60dvh;
@@ -530,7 +530,7 @@ h4,.h4 {
         max-width: 90%;
         height: 80dvh;
     }
-} */
+}
 .container h1 {
     font-weight: 700;
     font-family: 'Poppins', sans-serif;

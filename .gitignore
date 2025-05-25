@@ -4,3 +4,4 @@ __pycache__
 temp.md
 .env
 *.db
+*.pdf

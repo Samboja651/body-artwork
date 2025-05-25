@@ -465,20 +465,24 @@ h4,.h4 {
     }
 }
 
-.start-container {
+/* .start-container {
     background-image: url('../images/dashboard.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     max-width: 100%;
-    height: 40dvh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     color: #fff;
-}
+} */
+ img {
+    max-width: 100%;
+    height: auto;
+ }
 
 .end-container {
     background-image: url('../images/studio-1.jpg');
@@ -486,7 +490,7 @@ h4,.h4 {
     background-size: cover;
     background-position: center;
     max-width: 100%;
-    height: 43dvh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -495,38 +499,38 @@ h4,.h4 {
     color: #fff;
 }
 @media (min-width: 400px) {
-    .start-container, .end-container {
+    .end-container {
         height: 45dvh;
     }
 }
 @media (min-width: 421px) {
-    .start-container, .end-container {
+    .end-container {
         height: 50dvh;
     }
 }
 @media (min-width: 470px) {
-    .start-container, .end-container {
+    .end-container {
         height: 55dvh;
     }
 }
-@media (min-width: 600px) {
-    .start-container, .end-container {
+/* @media (min-width: 600px) {
+    .end-container {
         max-width: 80%;
         height: 60dvh;
     }
 }
 @media (min-width: 700px) {
-    .start-container, .end-container {
+    .end-container {
         max-width: 90%;
         height: 74dvh;
     }
 }
 @media (min-width: 800px) {
-    .start-container, .end-container {
+    .end-container {
         max-width: 90%;
         height: 80dvh;
     }
-}
+} */
 .container h1 {
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
